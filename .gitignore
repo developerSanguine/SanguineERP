@@ -1,5 +1,7 @@
 # Compiled class file
 *.class
+*.settings
+*.metadatas
 
 # Log file
 *.log

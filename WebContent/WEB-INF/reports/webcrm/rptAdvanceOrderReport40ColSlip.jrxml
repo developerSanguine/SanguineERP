@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="288" pageHeight="842" columnWidth="248" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4599d99-5fc3-4853-ab4c-6095cba680e8">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="inch"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="inch"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<parameter name="strCompanyName" class="java.lang.String"/>
+	<parameter name="strAddr2" class="java.lang.String"/>
+	<parameter name="strCity" class="java.lang.String"/>
+	<parameter name="strState" class="java.lang.String"/>
+	<parameter name="strCountry" class="java.lang.String"/>
+	<parameter name="strPin" class="java.lang.String"/>
+	<parameter name="strUserCode" class="java.lang.String"/>
+	<parameter name="strImagePath" class="java.lang.String"/>
+	<parameter name="strInvCode" class="java.lang.String"/>
+	<parameter name="dtInvDate" class="java.lang.String"/>
+	<parameter name="listDtlBean" class="java.util.List"/>
+	<parameter name="listDtlTaxBean" class="java.util.List"/>
+	<parameter name="grandTotal" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[new Double("0.00")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dtInvTime" class="java.lang.String"/>
+	<parameter name="strGSTNo" class="java.lang.String"/>
+	<parameter name="strInvNote" class="java.lang.String"/>
+	<parameter name="listSettleDtl" class="java.util.List"/>
+	<parameter name="dteFromDate" class="java.lang.String"/>
+	<parameter name="dteToDate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select a.strSACode,a.dtSADate,a.strLocCode,b.strLocName,a.strNarration,a.strAuthorise from tblstockadjustmenthd a,tbllocationmaster b
+ where a.strLocCode=b.strLocCode and a.strSACode='01SAAL000001' and a.strClientCode='001']]>
+	</queryString>
+	<field name="strProdName" class="java.lang.String"/>
+	<field name="dblAcceptQty" class="java.lang.Double"/>
+	<field name="dblWeight" class="java.lang.Double"/>
+	<field name="strPName" class="java.lang.String"/>
+	<field name="strMessage" class="java.lang.String"/>
+	<field name="strRemark" class="java.lang.String"/>
+	<field name="strShape" class="java.lang.String"/>
+	<field name="strNote" class="java.lang.String"/>
+	<field name="dblQty" class="java.lang.Double"/>
+	<group name="SubGroup">
+		<groupExpression><![CDATA[$F{strMessage}]]></groupExpression>
+	</group>
+	<group name="SubGroupF"/>
+	<group name="subgroup"/>
+	<group name="grpPName"/>
+	<title>
+		<band height="30">
+			<textField>
+				<reportElement x="80" y="0" width="110" height="20" uuid="5556606d-f3ab-4e29-9945-f061295f257f"/>
+				<textFieldExpression><![CDATA[$P{strCompanyName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="93">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="131" height="18" uuid="b4bbb1a8-3601-4442-97b0-339097a0864f"/>
+				<textElement>
+					<font fontName="Serif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strProdName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="124" height="15" uuid="792bf580-098f-4ce9-a40a-4493a129e356"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Order No. "+$F{strRemark}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="140" y="2" width="40" height="15" uuid="af38f5b7-0bae-4e28-8d0a-b3be94228f08"/>
+				<textElement textAlignment="Right">
+					<font fontName="Serif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dblQty}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#">
+				<reportElement x="200" y="2" width="37" height="17" uuid="73a79d6e-d1a4-48ae-a0f4-1d6e146b3690">
+					<property name="com.jaspersoft.studio.unit.height" value="inch"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Serif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dblWeight}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="40" width="144" height="20" uuid="8f50867d-5bb8-4961-9342-396ffdc9ee22">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Serif" size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strMessage}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="149" y="40" width="111" height="20" uuid="e1f54881-9169-4d48-bee7-8be23ef0320a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Serif" size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strShape}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="60" width="117" height="22" uuid="e28d275a-9aaa-436d-bcfa-9c70befdf19a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Serif" size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strNote}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="92" width="249" height="1" uuid="7d591075-f8c1-4c45-a7ca-4d1055c81367">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
