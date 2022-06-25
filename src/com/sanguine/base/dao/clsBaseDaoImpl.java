@@ -20,6 +20,7 @@ import com.sanguine.base.model.clsBaseModel;
 public class clsBaseDaoImpl implements intfBaseDao {
 
 	
+
 	
 	
 	@Autowired
