@@ -1680,6 +1680,9 @@ public class clsStructureUpdateDaoImpl implements clsStructureUpdateDao {
 					+ "('frmSettlementMaster', 'Settlement Master', 'Master', 9, 'M', 25, 110, '1', 'imgSettlementMaster.png', '1', 1, '1', '1', 'NO', 'NO', 'frmCRMSettlementMaster.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Y')";
 			funExecuteQuery(sql);
 			
+			sql="INSERT INTO `tbltreemast` VALUES ('frmSubGroupCategoryMaster', 'Sub Group Category Master', 'Master', 8, 'M', 28, 14, '1', 'default.png', '1', 1, '1', '1', 'NO', 'YES', 'frmSubGroupCategoryMaster.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Y');";
+			funExecuteQuery(sql);
+			
 			sql="UPDATE tbltreemast SET strFormDesc='WebBooks Link Up' WHERE strFormName='frmARLinkUp' AND strModule='1' ";
 			funExecuteQuery(sql);
 			

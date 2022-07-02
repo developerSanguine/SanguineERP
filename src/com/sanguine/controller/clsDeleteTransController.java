@@ -166,7 +166,7 @@ public class clsDeleteTransController {
 	
 		
 		mapTransForms.remove("frmExciseOpeningStock");
-		mapTransForms.remove("frmStockAdjustment");
+		//mapTransForms.remove("frmStockAdjustment");
 		
 		ModelAndView objModelAndView = new ModelAndView();
 		objModelAndView.addObject("listFormName", mapTransForms);

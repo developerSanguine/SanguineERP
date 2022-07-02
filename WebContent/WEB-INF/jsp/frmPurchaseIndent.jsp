@@ -942,7 +942,7 @@ $(document).ready(function(){
 			</div>
 			<div class="col-md-2">	
 				<label>Unit Price</label>
-				<input id="txtUnitPrice" readonly="readonly" style="width: 90%" name="txtUnitPrice" value="" type="text"  class="decimal-places-amt numberField" />
+				<input id="txtUnitPrice"  style="width: 90%" name="txtUnitPrice" value="" type="text"  class="decimal-places-amt numberField" />
 			</div>
 			<div class="col-md-2">	
 				<label>Min Level</label><br>
