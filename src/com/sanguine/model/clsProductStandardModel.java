@@ -32,8 +32,9 @@ public class clsProductStandardModel implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private long id;
-	
-	
+	/*	
+	@Column(name = "strReqCode")
+	private String strReqCode;*/
 
 	@Column(name = "strRemarks")
 	private String strRemarks;

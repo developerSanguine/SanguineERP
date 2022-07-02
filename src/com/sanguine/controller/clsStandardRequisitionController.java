@@ -23,6 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.sanguine.bean.clsRequisitionBean;
 import com.sanguine.model.clsProductMasterModel;
 import com.sanguine.model.clsProductStandardModel;
+import com.sanguine.model.clsProductStandard_ID;
 import com.sanguine.model.clsRequisitionDtlModel;
 import com.sanguine.model.clsTransactionTimeModel;
 import com.sanguine.service.clsProductMasterService;
@@ -135,7 +136,7 @@ public class clsStandardRequisitionController {
 						List<clsRequisitionDtlModel> listonReqDtl = reqBean.getListReqDtl();
 						if (null != listonReqDtl && listonReqDtl.size() > 0) {
 							objReqService.funDeleteProductStandard(reqBean.getStrLocBy(), propCode, clientCode);
-							List<clsProductStandardModel> listProdStdModel = funPrepardStandarBean(reqBean, clientCode, propCode);
+							List<clsProductStandardModel> listProdStdModel = funPrepardStandarBean(reqBean, clientCode, propCode,req);
 
 							objReqService.funAddProductStandard(listProdStdModel);
 
@@ -150,7 +151,7 @@ public class clsStandardRequisitionController {
 				List<clsRequisitionDtlModel> listonReqDtl = reqBean.getListReqDtl();
 				if (null != listonReqDtl && listonReqDtl.size() > 0) {
 					objReqService.funDeleteProductStandard(reqBean.getStrLocBy(), propCode, clientCode);
-					List<clsProductStandardModel> listProdStdModel = funPrepardStandarBean(reqBean, clientCode, propCode);
+					List<clsProductStandardModel> listProdStdModel = funPrepardStandarBean(reqBean, clientCode, propCode,req);
 
 					objReqService.funAddProductStandard(listProdStdModel);
 
@@ -167,12 +168,20 @@ public class clsStandardRequisitionController {
 
 	}
 
-	private List<clsProductStandardModel> funPrepardStandarBean(clsRequisitionBean objBean, String clientCode, String propCode) {
+	private List<clsProductStandardModel> funPrepardStandarBean(clsRequisitionBean objBean, String clientCode, String propCode, HttpServletRequest req) {
 		List<clsProductStandardModel> listprodStandard = new ArrayList<clsProductStandardModel>();
+		String ReqCode ="";
+		if (objBean.getStrReqCode().trim().length() == 0) {
+			long lastNo = 0;
+			clsProductStandardModel objPurchaseOrderHdModel;
+			ReqCode = objGlobalFunctions.funGenerateDocumentCode("frmStandardRequisition", objBean.getDtReqDate(), req);
+			//objPurchaseOrderHdModel = new clsProductStandardModel(new clsProductStandard(ReqCode,objBean.getStr, clientCode));
+			//objPurchaseOrderHdModel.setId(lastNo);	strProdCode, strLocCode, strPropertyCode, strClientCode
+		}
 		for (clsRequisitionDtlModel objDtl : objBean.getListReqDtl()) {
 			clsProductStandardModel prodStdModel = new clsProductStandardModel();
 			prodStdModel.setStrProdCode(objDtl.getStrProdCode());
-			
+			prodStdModel.setStrReqCode(ReqCode);
 			prodStdModel.setStrRemarks(objDtl.getStrRemarks());
 			prodStdModel.setStrClientCode(clientCode);
 			prodStdModel.setStrStandardType("RequestionStandard");

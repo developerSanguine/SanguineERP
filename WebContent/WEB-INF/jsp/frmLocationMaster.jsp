@@ -222,7 +222,7 @@ $(document).ready(function(){
 			            } else if (exception === 'abort') {
 			                alert('Ajax request aborted.');
 			            } else {
-			                alert('Uncaught Error.n' + jqXHR.responseText);
+			           //     alert('Uncaught Error.n' + jqXHR.responseText);
 			            }		            
 			        }
 			      });
@@ -1039,12 +1039,12 @@ $(document).ready(function(){
 				    </div>
 				    <div class="col-md-3">
 				     	<label>Location Name</label>
-				        <s:input type="text" id="txtlocName" name="txtlocName" size="80px"  path="strLocName" cssStyle="text-transform: uppercase;" required="true"/>
+				        <s:input type="text" id="txtlocName" name="txtlocName" size="80px"  path="strLocName" required="true"/>
 				        <s:errors path="strLocName"></s:errors>
 				    </div>  
 				    <div class="col-md-2">
 					 	<label>Description</label>
-					   	<s:input id="txtLocDesc" size="80px" name="txtLocDesc" path="strLocDesc" autocomplete="off" cssStyle="text-transform: uppercase;" />
+					   	<s:input id="txtLocDesc" size="80px" name="txtLocDesc" path="strLocDesc" autocomplete="off" />
 					    <s:errors path="strLocDesc"></s:errors>
 					 </div>
 					  <div class="col-md-4"></div>
@@ -1119,7 +1119,7 @@ $(document).ready(function(){
 				    </div>
 				    <div class="col-md-3">
 				     	<label>Like Location Name</label>
-				        <s:input type="text" id="txtlocName1" name="txtlocName1" size="80px"  path="strLocName1" cssStyle="text-transform: uppercase;" required="true"/>
+				        <s:input type="text" id="txtlocName1" name="txtlocName1" size="80px"  path="strLocName1" />
 				        <s:errors path="strLocName1"></s:errors>
 				    </div> <div class="col-md-1"> 
 				</div>

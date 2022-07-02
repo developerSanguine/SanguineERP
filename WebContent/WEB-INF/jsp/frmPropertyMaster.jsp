@@ -199,7 +199,7 @@
 			</div>
 
 			<div class="col-md-3"><label>Name </label>
-				  <s:input path="propertyName" id="txtPropName" cssStyle="text-transform: uppercase;" autocomplete="off" required="true"/>
+				  <s:input path="propertyName" id="txtPropName"  autocomplete="off" required="true"/>
 			</div>
 		 </div>
 		<br />

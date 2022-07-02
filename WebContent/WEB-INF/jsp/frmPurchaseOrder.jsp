@@ -521,7 +521,7 @@
 		 */
 		function funOpenHelp()
 		{
-			if ($("#cmbAgainst").val() == 'Purchase Indent')
+			if ($("#cmbAgainst").val() == 'Purchase Indents')
 				{
 					var PICode=$('#cmbPIDoc').val();
 					if(PICode.trim().length>0)
@@ -2346,7 +2346,7 @@
 		
 		  var dtPODate=$("#txtPODate").val();
 		   var location='<%=session.getAttribute("locationCode").toString()%>';
-			 
+		   var locationName='<%=session.getAttribute("locationName").toString()%>';
 			if(funGetMonthEnd(location,dtPODate)!=true)
 			{
           	alert("Month End Done For Selected Month");
@@ -2786,7 +2786,7 @@
 								cssClass="searchTextBox" />
 						</div>
 						<div class="col-md-2">
-							<s:label id="lblLocName" path="strLocName"
+							<s:input id="lblLocName" path="strLocName" value="${locationName}" required="false" contenteditable="false"
 								style="background-color:#dcdada94; width: 100%; height:51%;margin-top: 27px;padding:4px;" />
 						</div>
 					</div>
