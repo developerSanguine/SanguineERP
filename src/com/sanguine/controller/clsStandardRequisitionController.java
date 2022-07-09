@@ -23,7 +23,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.sanguine.bean.clsRequisitionBean;
 import com.sanguine.model.clsProductMasterModel;
 import com.sanguine.model.clsProductStandardModel;
-import com.sanguine.model.clsProductStandard_ID;
 import com.sanguine.model.clsRequisitionDtlModel;
 import com.sanguine.model.clsTransactionTimeModel;
 import com.sanguine.service.clsProductMasterService;
@@ -136,7 +135,7 @@ public class clsStandardRequisitionController {
 						List<clsRequisitionDtlModel> listonReqDtl = reqBean.getListReqDtl();
 						if (null != listonReqDtl && listonReqDtl.size() > 0) {
 							objReqService.funDeleteProductStandard(reqBean.getStrLocBy(), propCode, clientCode);
-							List<clsProductStandardModel> listProdStdModel = funPrepardStandarBean(reqBean, clientCode, propCode,req);
+							List<clsProductStandardModel> listProdStdModel = funPrepardStandarBean(reqBean, clientCode, propCode);
 
 							objReqService.funAddProductStandard(listProdStdModel);
 
@@ -151,7 +150,7 @@ public class clsStandardRequisitionController {
 				List<clsRequisitionDtlModel> listonReqDtl = reqBean.getListReqDtl();
 				if (null != listonReqDtl && listonReqDtl.size() > 0) {
 					objReqService.funDeleteProductStandard(reqBean.getStrLocBy(), propCode, clientCode);
-					List<clsProductStandardModel> listProdStdModel = funPrepardStandarBean(reqBean, clientCode, propCode,req);
+					List<clsProductStandardModel> listProdStdModel = funPrepardStandarBean(reqBean, clientCode, propCode);
 
 					objReqService.funAddProductStandard(listProdStdModel);
 

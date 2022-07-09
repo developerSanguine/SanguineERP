@@ -2,6 +2,7 @@
 *.class
 *.settings
 *.metadatas
+*target
 
 # Log file
 *.log

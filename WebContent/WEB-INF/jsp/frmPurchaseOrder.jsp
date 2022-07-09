@@ -879,8 +879,9 @@
 							gPICode=response[0][9];
 							
 							var strProdCode=response[0][0];
+							var suppCode=$("#txtSuppCode").val();
 							
-							var searchUrl1=getContextPath()+"/getProductPrice.html?gSuppCode="+gSuppCode+"&strProdCode="+strProdCode;
+							var searchUrl1=getContextPath()+"/getProductPrice.html?suppCode="+suppCode+"&prodCode="+strProdCode;
 							$.ajax({
 							        type: "GET",
 							        url: searchUrl1,
@@ -1517,8 +1518,10 @@
 				row.insertCell(9).innerHTML= "<input name=\"listPODtlModel["+(rowCount)+"].dblPrice\" type=\"text\" required = \"required\" style=\"text-align: left;\"  size=\"2%\" class=\"decimal-places-amt inputText-Auto price\" id=\"txtPrice."+(rowCount)+"\" value="+parseFloat(dblPrice).toFixed(maxAmountDecimalPlaceLimit)+" onblur=\"Javacsript:funUpdatePrice(this)\">";
 			} 
 		    
-		    row.insertCell(10).innerHTML= "<input readonly=\"readonly\" class=\"Box\" size=\"15%\"   id=\"strGroupTaxName."+(rowCount)+"\" value = '"+groupTaxName+"' onclick=funHelp1("+(rowCount)+",'groupTaxCodeForGRN') >";
-		    row.insertCell(11).innerHTML= "<input name=\"listPODtlModel["+(rowCount)+"].dblDiscount\"  step=\"any\" required = \"required\" size=\"5%\" style=\"text-align: right;\" class=\"inputText-Auto txtDisc\" id=\"txtDiscount."+(rowCount)+"\" value="+parseFloat(dblDiscount).toFixed(maxAmountDecimalPlaceLimit)+">";	    
+		    row.insertCell(10).innerHTML= "<input readonly=\"readonly\" class=\"Box\" size=\"10%\"   id=\"strGroupTaxName."+(rowCount)+"\" value = '"+groupTaxName+"' onclick=funHelp1("+(rowCount)+",'groupTaxCodeForGRN') >";
+		 
+		    //   row.insertCell(11).innerHTML= "<input name=\"listPODtlModel["+(rowCount)+"].dblDiscount\"  step=\"any\" required = \"required\" size=\"5%\" style=\"text-align: right;\" class=\"inputText-Auto txtDisc\" id=\"txtDiscount."+(rowCount)+"\" value="+parseFloat(dblDiscount).toFixed(maxAmountDecimalPlaceLimit)+">";	    
+		    row.insertCell(11).innerHTML= "<input name=\"listPODtlModel["+(rowCount)+"].dblDiscount\" type=\"text\" size=\"4%\" required = \"required\" style=\"text-align: left;\" class=\"decimal-places-amt inputText-Auto txtDisc\" id=\"txtDiscount."+(rowCount)+"\" value="+parseFloat(dblDiscount).toFixed(maxAmountDecimalPlaceLimit)+" onblur=\"Javacsript:funCalDiscountItemWise(this)\" >";
 		    row.insertCell(12).innerHTML= "<input name=\"listPODtlModel["+(rowCount)+"].dblAmount\" readonly=\"readonly\" class=\"Box1 totalValueCell\" size=\"6%\" id=\"txtAmount."+(rowCount)+"\" value="+parseFloat(amount).toFixed(maxAmountDecimalPlaceLimit)+" >";
 		    row.insertCell(13).innerHTML= "<input name=\"listPODtlModel["+(rowCount)+"].strRemarks\" size=\"15%\" id=\"txtRemarks."+(rowCount)+"\"  value=''/>";
 		 	row.insertCell(14).innerHTML= "<input name=\"listPODtlModel["+(rowCount)+"].strPICode\" readonly=\"readonly\" class=\"Box PICode\" size=\"8%\" id=\"txtPICode."+(rowCount)+"\" value='"+PICode+"'/>";
@@ -1592,8 +1595,10 @@
 			var strProdName=$("#lblProdName").text();
 			
 			var strUOM=$("#cmbUOM").val();	
-			var strSuppCode=gSuppCode;
-			var SupplierName=gSuppName;
+			/* var strSuppCode=gSuppCode;
+			var SupplierName=gSuppName; */
+			var strSuppCode=$("#txtSuppCode").val();
+			var SupplierName=$("#lblSupplierName").text();
 		    var dblOrdQty = $("#txtOrderQty").val();
 		    dblOrdQty=parseFloat(dblOrdQty).toFixed(maxQuantityDecimalPlaceLimit);
 		    if($("#txtWeight").val()=='')

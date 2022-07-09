@@ -2243,7 +2243,7 @@ public class clsCheckInController {
 				
 				double dblPackageAmount=0;
 				String sqlFolioPackage="select b.strPerticulars,b.dblDebitAmt from tblfoliohd a,tblfoliodtl b"
-						+ " where a.strFolioNo=b.strFolioNo and a.strCheckInNo='"+reciptNo+"'and a.strClientCode='"+clientCode+"' ";
+						+ " where a.strFolioNo=b.strFolioNo and a.strCheckInNo='"+reciptNo+"' and  b.strPerticulars='Package'  and a.strClientCode='"+clientCode+"' ";
 					//	+ " and b.strPerticulars='Package'";
 				
 				List listFolioPackage = objGlobalFunctionsService.funGetListModuleWise(sqlFolioPackage, "sql");

@@ -32,9 +32,11 @@ public class clsProductStandardModel implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private long id;
-	/*	
+	
+	
 	@Column(name = "strReqCode")
-	private String strReqCode;*/
+	private String strReqCode;
+	
 
 	@Column(name = "strRemarks")
 	private String strRemarks;
@@ -143,12 +145,12 @@ public class clsProductStandardModel implements Serializable {
 		this.strClientCode = strClientCode;
 	}
 
-	/*public String getStrReqCode() {
+	public String getStrReqCode() {
 		return strReqCode;
 	}
 
 	public void setStrReqCode(String strReqCode) {
 		this.strReqCode = strReqCode;
-	}*/
+	}
 
 }

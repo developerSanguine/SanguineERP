@@ -16,12 +16,10 @@ import java.util.TreeMap;
  * Git testing
  */
 
-
-
-
 /**
  *
  * @author Administrator
+ * 
  */
 public class clsClientDetails {
 
@@ -212,7 +210,7 @@ public class clsClientDetails {
 			hmClientDtl.put("338.001", clsClientDetails.createClientDetails("338.001", "ELEPHANT & CO", dFormat.parse("2019-10-22"), dFormat.parse("2019-12-08")));//(Pune)//Released on 22-10-2019 for 1 month till 22-11-2019 for 2 SPOS ,5 APOS,WebStocks,No SMS Pack,No Bill Deletion.", "ANUJ SOLANKI", "9819657210", "anujsolanki@gmail.com", "No Bill Deletion","santesting","2","PUNE","50K","10K"
 			hmClientDtl.put("344.001", clsClientDetails.createClientDetails("344.001", "THE GLOBAL ADDA", dFormat.parse("2021-09-09"), dFormat.parse("2022-09-09")));//(Mumbai)//Released on 09-12-2019 for 1 year till 09-12-2020
 			hmClientDtl.put("345.001", clsClientDetails.createClientDetails("345.001", "YOGI RESORTS", dFormat.parse("2019-12-10"), dFormat.parse("2020-03-20")));//Renewed on 11-02-2020 for 1 month till 09-03-2020//Created Licence On 10-12-2019 to 10-02-2020
-			hmClientDtl.put("346.001", clsClientDetails.createClientDetails("346.001", "MNV HOSPITALITY LLP", dFormat.parse("2020-02-01"), dFormat.parse("2022-06-30")));//(Mumbai)//Released on 04-02-2020 for 1 month till 10-03-2020
+			hmClientDtl.put("346.001", clsClientDetails.createClientDetails("346.001", "MNV HOSPITALITY LLP", dFormat.parse("2020-02-01"), dFormat.parse("2023-01-05")));//(Mumbai)//Released on 04-02-2020 for 1 month till 10-03-2020
 			hmClientDtl.put("359.001", clsClientDetails.createClientDetails("359.001", "Hotel Demo", dFormat.parse("2020-03-27"), dFormat.parse("2023-03-27")));//Generated on 2020-03-27 for 3 year till 2023-03-27 as per swapnil said
 			hmClientDtl.put("361.001", clsClientDetails.createClientDetails("361.001", "TASTY KORNER", dFormat.parse("2020-09-23"), dFormat.parse("2021-09-23")));//
 			hmClientDtl.put("365.001", clsClientDetails.createClientDetails("365.001", "TMF HOSPITALITY LLP", dFormat.parse("2020-07-27"), dFormat.parse("2021-10-15")));//(Mumbai)//Released on 27-07-2020 for 3 month till 27-10-2020
@@ -220,16 +218,16 @@ public class clsClientDetails {
 			hmClientDtl.put("376.001", clsClientDetails.createClientDetails("376.001", "METRO BAKERY", dFormat.parse("2020-07-27"), dFormat.parse("2020-11-31")));
 			hmClientDtl.put("378.001", clsClientDetails.createClientDetails("378.001", "CERATEC", dFormat.parse("2020-12-14"), dFormat.parse("2023-04-02")));
 			hmClientDtl.put("380.000", clsClientDetails.createClientDetails("380.000", "STARLIGHT BAKERY AND CAFE", dFormat.parse("2021-08-04"), dFormat.parse("2022-08-04")));//Released on 4thAug for 1 month(Mumbai)
-			hmClientDtl.put("382.000", clsClientDetails.createClientDetails("382.000", "RAINFOREST", dFormat.parse("2021-01-01"), dFormat.parse("2022-05-11")));
+			hmClientDtl.put("382.000", clsClientDetails.createClientDetails("382.000", "RAINFOREST", dFormat.parse("2021-01-01"), dFormat.parse("2022-07-11")));
 			hmClientDtl.put("383.001", clsClientDetails.createClientDetails("383.001", "ARON HOTEL AND RESORTS PVT. LTD", dFormat.parse("2021-01-08"), dFormat.parse("2023-01-08")));			
 			hmClientDtl.put("384.001", clsClientDetails.createClientDetails("384.001", "Delightful Foods Private Limited", dFormat.parse("2021-01-15"), dFormat.parse("2021-02-22")));
 			hmClientDtl.put("386.001", clsClientDetails.createClientDetails("386.001", "GRAVITY INFRASTRUCTURE", dFormat.parse("2021-02-13"), dFormat.parse("2022-03-14")));
 			hmClientDtl.put("387.001", clsClientDetails.createClientDetails("387.001", "HOTEL RIYA IMPERRIAL", dFormat.parse("2021-02-17"), dFormat.parse("2023-02-17")));
 			hmClientDtl.put("389.001", clsClientDetails.createClientDetails("389.001", "HOPWORKS BREWING COMPANY", dFormat.parse("2021-03-23"), dFormat.parse("2022-03-23")));
-			hmClientDtl.put("391.001", clsClientDetails.createClientDetails("391.001", "HOTEL EXPRESS CLUB", dFormat.parse("2021-03-25"), dFormat.parse("2022-04-30")));
+			hmClientDtl.put("391.001", clsClientDetails.createClientDetails("391.001", "HOTEL EXPRESS CLUB", dFormat.parse("2021-03-25"), dFormat.parse("2022-07-30")));
 			hmClientDtl.put("395.001", clsClientDetails.createClientDetails("395.001", "SS BAKERS", dFormat.parse("2021-05-23"), dFormat.parse("2021-07-21")));
 			hmClientDtl.put("400.001", clsClientDetails.createClientDetails("400.001", "ROOP RESORTS", dFormat.parse("2021-09-24"), dFormat.parse("2022-09-24")));
-			hmClientDtl.put("412.001", clsClientDetails.createClientDetails("412.001", "CELEJOR FOODS INDIA", dFormat.parse("2021-11-13"), dFormat.parse("2022-6-14")));//(MUMBAI)//RELEASED FOR 1 MONTH
+			hmClientDtl.put("412.000", clsClientDetails.createClientDetails("412.000", "CELEJOR FOODS INDIA", dFormat.parse("2021-11-13"), dFormat.parse("2022-12-30")));//(MUMBAI)//RELEASED FOR 1 MONTH
 			hmClientDtl.put("413.001", clsClientDetails.createClientDetails("413.001", "THE MASTER CLOCK & WATCH WORKS PVT LTD", dFormat.parse("2021-12-12"), dFormat.parse("2022-12-13")));
 			hmClientDtl.put("413.002", clsClientDetails.createClientDetails("413.002", "TRUECHAMP RESTAURANTS PVT LTD", dFormat.parse("2021-12-29"), dFormat.parse("2023-01-02")));
 			hmClientDtl.put("414.001", clsClientDetails.createClientDetails("414.001", "HOTEL GEETANJALI INN", dFormat.parse("2022-01-20"), dFormat.parse("2023-02-28")));
@@ -239,7 +237,9 @@ public class clsClientDetails {
 			hmClientDtl.put("419.000", clsClientDetails.createClientDetails("419.000", "ACAPELLA FOODS AND RESTAURANTS PVT LTD", dFormat.parse("2022-04-07"), dFormat.parse("2022-07-30")));
 			hmClientDtl.put("422.001", clsClientDetails.createClientDetails("422.001", "MEZZA9 HOSPITALITY LLP", dFormat.parse("2022-05-27"), dFormat.parse("2022-07-27")));
 			hmClientDtl.put("426.001", clsClientDetails.createClientDetails("426.001", "HOLIDAY VALLEY HOTELS AND RESORTS", dFormat.parse("2022-05-27"), dFormat.parse("2022-07-27")));
-			
+			hmClientDtl.put("427.001", clsClientDetails.createClientDetails("427.001", "SNP FOOD AND CATERING", dFormat.parse("2022-06-25"), dFormat.parse("2023-07-25")));
+		
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -1643,8 +1643,8 @@ public class clsExcelExportImportController {
 							}
 							clsProductMasterModel Prodmodel = objProductMasterService.funGetObject(prodCode, clientCode);
 							
-							PhyStkDtl.setDblPrice(row.getCell(6).getNumericCellValue());
-							
+							//PhyStkDtl.setDblPrice(row.getCell(6).getNumericCellValue());
+							PhyStkDtl.setDblPrice(Double.parseDouble(row.getCell(6).toString()));
 							if(objSetUp.getStrLocationWiseValuation().equals("Y"))
 							{
 								
