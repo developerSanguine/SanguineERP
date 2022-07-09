@@ -91,6 +91,8 @@ public class clsMaterialReturnController {
 	 */
 	@RequestMapping(value = "/frmMaterialReturn", method = RequestMethod.GET)
 	public ModelAndView funOpenMISForm(Map<String, Object> model, HttpServletRequest request) {
+		
+		
 		String clientCode = request.getSession().getAttribute("clientCode").toString();
 		String propCode = request.getSession().getAttribute("propertyCode").toString();
 		request.getSession().setAttribute("formName", "frmMaterialReturn");
